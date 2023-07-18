@@ -22,7 +22,9 @@ export default function Main({onEditProfile, onAddPlace, onEditAvatar, onCardCli
             dataCard.forEach(element => element.mineId = dataUser._id) 
             setCards(dataCard)
             })
+        .catch((error) => console.error(`Ошибка создания начальных данных ${error}`))
             },[])
+            
 
 
     return(
@@ -53,7 +55,7 @@ export default function Main({onEditProfile, onAddPlace, onEditAvatar, onCardCli
                     </div>
                 )
             })}
-        </section>
+         </section>
     </main>
     )
 
